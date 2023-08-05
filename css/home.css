@@ -1,0 +1,55 @@
+/* HERO SECTION */
+
+.HERO { min-height: 100vh; }
+
+.HERO .frame { min-height: inherit; }
+
+.HERO .frame {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.HERO h1 {
+    
+    text-align: center;
+    color: var(--color-white);
+}
+
+@media screen and (min-width: 1200px) {
+    .HERO h1 {
+        font-size: 6rem;
+    }
+}
+
+.HERO h1 > span:first-of-type {
+    color: #C8906A;
+    display: inline;
+    font-family: inherit;
+}
+
+.HERO h1 > span:last-of-type {
+    display: block;
+    margin: 0 auto;
+    color: #C18B67;
+    font-family: inherit;
+    line-height: 2.369rem;
+}
+
+.HERO .icon {
+    width: 2rem;
+    height: 2rem;
+    color: #C18B67;
+    position: relative;
+    margin-top: 2rem;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-25%); }
+    100% { transform: translateY(0); }
+}

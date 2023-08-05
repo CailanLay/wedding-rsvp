@@ -1,0 +1,126 @@
+/* LAYOUT */
+
+form {
+    box-sizing: border-box;
+    padding: var(--form-padding);
+}
+
+
+
+form .input {
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+form .input:first-of-type { padding-top: 0; }
+form .input:last-of-type { padding-bottom: 0; }
+
+form .input:not(.alt-radio-group) {
+    display: flex;
+    flex-direction: column;
+}
+
+form .input .label {
+    font-size: 16px; 
+}
+
+
+/* INPUTS */
+
+form .input.alt-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form .input.alt-radio-group > p {
+    flex: 0 0 100%;
+    margin: 0 0 0.25rem;
+}
+
+form .input.alt-radio-group label {
+    display: inherit;
+    align-items: center;
+}
+
+form .input.alt-radio-group label:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+
+
+select,
+input:where([type="text"], [type="email"], [type="number"], [type="password"], [type="search"], [type="submit"]) {
+    appearance: none;
+    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    margin: 0;
+    box-shadow: 0 0 0 1px var(--color-black);
+    border-radius: 2px;
+    line-height: 1.5;
+    font-size: 16px;
+    min-width: 220px;
+    width: fit-content;
+}
+
+input[type="submit"] { min-width: unset; }
+
+select:focus-within,
+input:where([type="text"], [type="email"], [type="number"], [type="password"], [type="search"]):focus-within {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+select {
+    padding: 12px 34px 12px 12px;
+    background: url('./../assets/chevron-down.svg') no-repeat calc(100% - 8px) center / 18px;
+}
+
+
+
+/* SUBMIT  */
+form input:where([type='submit'], [type="button"]) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    appearance: none;
+    line-height: 2rem;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    text-decoration: none;
+    color: var(--color-grey-400);
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 0 0 0 2px var(--color-black);
+    margin: 8px;
+    padding: .313rem 1.252rem;
+    border-radius: 2px;
+    transition: 0.25s;
+    margin: 0;
+}
+
+form input:where([type='submit'], [type="button"]) { margin-left: 0; }
+form input:where([type='submit'], [type="button"]) { margin-right: 0; }
+
+form input:where([type='submit'], [type="button"]):hover {
+	color: var(--color-primary);
+	box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+/*  GLOBAL - Button - filled */
+form input:where([type='submit'], [type="button"]).alt-filled {
+	color: var(--color-white);
+	background: var(--color-black);
+}
+form input:where([type='submit'], [type="button"]).alt-filled:hover {
+	color: var(--color-white);
+	background: var(--color-primary);
+}
+
+/*  GLOBAL - Button - link */
+form input:where([type='submit'], [type="button"]).alt-link {
+	box-shadow: none;
+}
+
