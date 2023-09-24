@@ -1,0 +1,39 @@
+/* CARDS */
+
+.CARDS .columns { counter-reset: index; }
+.CARDS .columns .column { counter-increment: index; }
+.CARDS .columns .column .card .number { position: relative; }
+.CARDS .columns .column .card .number::before {
+    content: counter(index);
+    display: block;
+    font-size: 1.925rem; 
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+.CARDS .card {
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    color: var(--color-white);
+    border-radius: 25px;
+    background: var(--color-brown-dark);
+    position: relative;
+    text-align: center;
+}
+
+.CARDS .card::before {
+    content: "";
+    font-family: inherit;
+    line-height: inherit;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0.3;
+    background: var(--color-brown-dark);
+}

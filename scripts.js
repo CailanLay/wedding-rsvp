@@ -23,7 +23,25 @@ const only = (mediaQuery) => {
 window.addEventListener('DOMContentLoaded', e => {
 
     hideNavOnScroll();
-    toggleMobileNav();
+    // toggleMobileNav();
+    
+
+    // Accordion
+    (() => {
+        let currentActive = null;
+        const accordions = document.querySelectorAll('.accordion');
+        
+        for(const accordionEl of accordions) {
+            const accordion = new Accordion(accordionEl);
+            accordion.onChange(() => {
+                if(currentActive && currentActive !== accordion) currentActive.close();
+                currentActive = accordion
+            })
+        }
+    })();
+
+    
+
 
 })
 
@@ -91,3 +109,4 @@ function hideNavOnScroll() {
         prevScroll = currentScroll;
     })
 }
+

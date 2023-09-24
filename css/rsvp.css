@@ -1,0 +1,15 @@
+.HERO .icon {
+    width: 2rem;
+    height: 2rem;
+    color: #C18B67;
+    position: relative;
+    margin-top: 2rem;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-25%); }
+    100% { transform: translateY(0); }
+}

@@ -1,6 +1,13 @@
 /* HERO SECTION */
 
-.HERO { min-height: 100vh; }
+.HERO {
+    min-height: 100vh;
+    text-align: center;
+    background: no-repeat center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center, top left  calc(50% - 56px);
+}
 
 .HERO .frame { min-height: inherit; }
 
@@ -12,44 +19,190 @@
     justify-content: center;
 }
 
-.HERO h1 {
-    
-    text-align: center;
+.HERO .content {
+    text-shadow: 0px 0px 40px rgba(0,0,0,0.6);
+}
+
+.HERO .content h1 {
+    margin-top: 0;
     color: var(--color-white);
 }
 
-@media screen and (min-width: 1200px) {
-    .HERO h1 {
-        font-size: 6rem;
+@media screen and (max-width: 960px) {
+    .HERO .content h1 {
+        line-height: 1;
     }
 }
 
-.HERO h1 > span:first-of-type {
-    color: #C8906A;
-    display: inline;
-    font-family: inherit;
+
+
+
+
+/* INTRO */
+
+.INTRO {
+    text-align: center;
 }
 
-.HERO h1 > span:last-of-type {
-    display: block;
-    margin: 0 auto;
-    color: #C18B67;
-    font-family: inherit;
-    line-height: 2.369rem;
+.INTRO .frame {
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.HERO .icon {
-    width: 2rem;
-    height: 2rem;
-    color: #C18B67;
+
+.INTRO .people {
+    gap: 36px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.INTRO .people .name {
+    margin: 0;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+}
+
+.INTRO .people .name .last { font-size: 1rem; }
+
+
+
+.INTRO .info { letter-spacing: 2px; }
+
+.INTRO .info .date {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .25rem;
+    color: var(--color-brown-dark);
+}
+
+.INTRO .info .date * { margin: 0; }
+
+.INTRO hr {
+    max-width: 440px;
+    margin: 60px 0;
+    height: 1px;
+    width: 100%;
+    background: var(--color-black);
+}
+
+.INTRO .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background: var(--color-black);
+}
+
+
+
+
+
+/* ABOUT */
+.ABOUT .image {
+    aspect-ratio: 1;
+    border-radius: 1rem;
+}
+
+
+
+
+
+
+/* SPONSORS */
+.SPONSORS .names {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.SPONSORS .names > li:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+/* Q&A */
+.QUESTIONS .frame { width: min(100%, 660px); }
+
+
+
+
+
+
+
+
+
+/* ACCORDION */
+
+.accordion {
+    border-radius: 25px;
+    background: var(--color-bg-dark);
+}
+
+.accordion:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.accordion button {
+    appearance: none;
     position: relative;
-    margin-top: 2rem;
-    animation: bounce 1s ease-in-out infinite;
+    margin: 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: inherit;
+    box-sizing: border-box;
+    color: var(--color-white);
+    padding: 20px 100px 20px 40px;
+    background: var(--color-brown-dark);
+}
+.accordion button[aria-expanded="false"],
+.accordion button[aria-expanded="true"] { color: var(--color-white); }
+
+.accordion::after {
+    content: '';
+    position: absolute;
+    right: 40px;
+    width: 40px;
+    aspect-ratio: 1;
+    background: url('./../assets/arrow-down.svg');
+}
+
+.accordion .content-wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+}
+
+.accordion .content {
+    opacity: 0;
+    padding: 20px 40px 20px;
+    box-sizing: border-box;
+    transform: scale(0.95);
+    transition: 0.25s ease-in-out;
+}
+
+.accordion button[aria-expanded="true"] + .content-wrapper .content {
+    opacity: 1;
+    transform: scale(1);
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 960px) {
+    .accordion button { padding: 20px 20px; }
+    .accordion button h3 { font-size: 1.14rem; }
+    .accordion .content { padding: 20px; }
 }
 
 
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-25%); }
-    100% { transform: translateY(0); }
-}

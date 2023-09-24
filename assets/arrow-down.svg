@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" zoomAndPan="magnify" viewBox="0 0 810 1439.999935" height="1920" preserveAspectRatio="xMidYMid meet" version="1.0">
+    <defs>
+        <clipPath id="5b51cbe00c">
+            <path d="M 200.550781 0 L 609.296875 0 L 609.296875 1440 L 200.550781 1440 Z M 200.550781 0 " clip-rule="nonzero"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#5b51cbe00c)">
+        <path fill="#292727" d="M 224.371094 976.066406 C 250.433594 987.457031 278.289062 997.277344 300.996094 1003.074219 C 318.816406 1007.621094 355.304688 1013.960938 363.652344 1013.960938 L 369.777344 1013.960938 L 369.777344 0.566406 L 440 0.566406 L 440 1013.960938 L 446.125 1013.960938 C 454.472656 1013.960938 490.960938 1007.621094 508.78125 1003.074219 C 531.488281 997.277344 559.34375 987.457031 585.40625 976.066406 C 598.527344 970.328125 609.265625 965.78125 609.265625 965.957031 C 609.265625 968.289062 406.242188 1438.886719 405.105469 1439.210938 C 403.976562 1439.53125 200.515625 968.910156 200.515625 965.976562 C 200.515625 965.789062 211.25 970.332031 224.375 976.066406 Z M 224.371094 976.066406 " fill-opacity="1" fill-rule="nonzero"/>
+    </g>
+</svg>

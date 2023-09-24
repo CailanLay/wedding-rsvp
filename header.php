@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
     <title>RSVP</title>
 
@@ -21,9 +23,6 @@
     <header class='alt-top'>
         <div class="frame">
             <nav>
-
-                <a href="/" class="logo"></a>
-
                 <ul class='links'>
                     <?php foreach($nav_links as $link) {  ?>
                         <li>
@@ -31,13 +30,6 @@
                         </li>
                     <?php } ?>
                 </ul>
-
-                <button class='nav-toggle'>
-                    <span class='line'></span>
-                    <span class='line'></span>
-                    <span class='line'></span>
-                    <span class='line'></span>
-                </button>
             </nav>
         </div>
     </header>
